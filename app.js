@@ -6,13 +6,13 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 
-app.get("/",cors(),(req,res)=>{
-
+app.get("/sign-up",cors(),(req,res)=>{
+    res.send('Successful')
 })
 
 
 
-app.post("/", async (req,res)=>{
+app.post("/sign-up", async (req,res)=>{
     const{email, password} = req.body
 
     try {
@@ -30,7 +30,7 @@ app.post("/", async (req,res)=>{
     }
 })
 
-app.post("/signup", async (req,res)=>{
+app.post("/signupdb", async (req,res)=>{
     const{email,password}=req.body
 
     const data = {

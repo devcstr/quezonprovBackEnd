@@ -19,7 +19,7 @@ function LoginDB() {
         })
             .then(res=>{
                 if(res.data==="exist"){
-                    history("/", {state:{id:email}})
+                    history("/sign-up", {state:{id:email}})
                 }
             
                 else if(res.data==="notexist"){
@@ -53,7 +53,7 @@ function LoginDB() {
     <p>OR</p>
     <br />
 
-    <Link to="/signup">Sign Up page</Link>
+    <Link to="/signupdb">Sign Up page</Link>
     </div>
   )
 

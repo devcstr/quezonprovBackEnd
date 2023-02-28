@@ -14,7 +14,7 @@ function SignUpDB() {
 
         try{
 
-            await axios.post("http://localhost:8000/signup",{
+            await axios.post("http://localhost:8000/signupdb",{
                 email,
                 password
             })
@@ -24,7 +24,7 @@ function SignUpDB() {
                 }
                 
                 else if(res.data==="notexist"){
-                    history("/", {state:{id:email}})
+                    history("/sign-up", {state:{id:email}})
                 }
             })
             .catch(e=>{
@@ -52,7 +52,7 @@ function SignUpDB() {
     <p>OR</p>
     <br />
 
-    <Link to="/">Login Page</Link>
+    <Link to="/logindb">Login Page</Link>
     </div>
   )
 
